@@ -1,0 +1,446 @@
+
+/* GROCERYKO - GENERAL STYLING */
+
+:root {
+    --blue: #B8D8E8;
+    --pink: #F4BFCB;
+    --mint: #BFE8D3;
+
+    --text: #4F5964;
+    --muted: #7D8991;
+
+    --background: #F8FAFB;
+    --white: #FFFFFF;
+    --border: #E1E9EC;
+
+    --danger: #E58B9C;
+    --success: #68A98A;
+
+    --shadow: 0 18px 50px rgba(120, 160, 180, 0.12);
+}
+
+/* GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+button, input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* LOGIN AND REGISTER */
+.auth-layout {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 32px 16px;
+    background: linear-gradient(135deg, var(--pink), var(--blue), var(--mint));
+}
+
+.auth-card, .list-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+}
+
+.auth-card {
+    width: min(100%, 470px);
+    padding: 38px;
+}
+
+/* LOGO */
+.brand {
+    color: var(--text);
+    font-size: 27px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.brand span {
+    color: #739FB8;
+}
+
+/* HEADINGS */
+.eyebrow {
+    margin: 25px 0 9px;
+    color: #739FB8;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+h1, h2, p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: clamp(28px, 5vw, 36px);
+    color: var(--text);
+}
+
+h2 {
+    font-size: 21px;
+}
+
+.muted {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.small-text {
+    font-size: 13px;
+}
+
+/* INPUT FIELDS */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.form-field label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.form-field input {
+    width: 100%;
+    min-height: 47px;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+}
+
+.form-field input:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(184, 216, 232, 0.35);
+}
+
+/* BUTTONS */
+.primary-button, .secondary-button {
+    min-height: 45px;
+    padding: 0 18px;
+    border: 0;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.primary-button {
+    background: var(--pink);
+    color: var(--text);
+}
+
+.primary-button:hover {
+    background: #EBAFBE;
+}
+
+.secondary-button {
+    background: var(--blue);
+    color: var(--text);
+}
+
+.secondary-button:hover {
+    background: #A4C9DD;
+}
+
+.full-width {
+    width: 100%;
+    margin-top: 23px;
+}
+
+/* LINKS AND MESSAGES */
+.switch-page {
+    margin-top: 23px;
+    color: var(--muted);
+    text-align: center;
+    font-size: 13px;
+}
+
+.switch-page a {
+    color: #739FB8;
+    font-weight: bold;
+}
+
+.form-message {
+    min-height: 18px;
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.success {
+    color: var(--success);
+}
+
+.error {
+    color: var(--danger);
+}
+
+/* NAVIGATION */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 6%;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.topbar .brand {
+    font-size: 25px;
+}
+
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.welcome-message {
+    color: var(--muted);
+}
+
+/* MAIN CONTENT */
+.app-container {
+    width: min(900px, calc(100% - 32px));
+    margin: 48px auto;
+}
+
+.page-heading {
+    margin-bottom: 25px;
+}
+
+.list-card {
+    padding: 28px;
+}
+
+/* ADD ITEM */
+.item-form {
+    display: flex;
+    align-items: end;
+    gap: 14px;
+}
+
+.item-form .form-field {
+    margin-top: 0;
+}
+
+.item-name-field {
+    flex: 1;
+}
+
+.quantity-field {
+    width: 130px;
+}
+
+.add-button {
+    min-width: 125px;
+}
+
+/* LIST HEADING */
+.list-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 35px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid var(--border);
+}
+
+.count-pill {
+    padding: 7px 12px;
+    border-radius: 30px;
+    background: var(--mint);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* GROCERY ITEMS */
+.grocery-list {
+    display: grid;
+    gap: 10px;
+    margin: 18px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.grocery-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--white);
+}
+
+.grocery-item:hover {
+    border-color: var(--blue);
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.item-check {
+    accent-color: #79AD91;
+    cursor: pointer;
+}
+
+.item-name {
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.item-quantity {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.grocery-item.completed {
+    background: #F0FAF5;
+    border-color: var(--mint);
+}
+
+.grocery-item.completed .item-name {
+    text-decoration: line-through;
+    color: var(--muted);
+}
+
+/* EDIT AND DELETE */
+.item-actions {
+    display: flex;
+    gap: 7px;
+}
+
+.small-action {
+    padding: 7px 10px;
+    border: 1px solid var(--blue);
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--text);
+    font-size: 12px;
+}
+
+.small-action:hover {
+    background: var(--blue);
+}
+
+.small-action.delete {
+    color: var(--danger);
+    border-color: var(--pink);
+}
+
+.small-action.delete:hover {
+    background: var(--danger);
+    color: var(--white);
+}
+
+/* EMPTY LIST */
+.empty-message {
+    padding: 25px 10px;
+    color: var(--muted);
+    text-align: center;
+}
+
+/* CLEAR LIST */
+.list-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+}
+
+.text-button {
+    border: 0;
+    background: none;
+    color: var(--danger);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer-note {
+    margin-top: 24px;
+    color: var(--muted);
+    text-align: center;
+    font-size: 12px;
+}
+
+/* ACCESSIBILITY */
+button:focus-visible, a:focus-visible, input:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 3px;
+}
+
+/* MOBILE DESIGN */
+@media (max-width: 620px) {
+    .auth-card {
+        padding: 28px 22px;
+    }
+
+    .topbar {
+        padding: 15px 18px;
+    }
+
+    .welcome-message {
+        display: none;
+    }
+
+    .app-container {
+        margin: 30px auto;
+    }
+
+    .list-card {
+        padding: 20px 16px;
+    }
+
+    .item-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .quantity-field, .add-button {
+        width: 100%;
+    }
+
+    .grocery-item {
+        align-items: flex-start;
+    }
+
+    .item-actions {
+        flex-direction: column;
+    }
+}
+
+/* REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}

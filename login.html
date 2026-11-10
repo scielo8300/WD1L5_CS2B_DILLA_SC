@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title> GroceryKo | Log In </title>
+
+        <link rel="stylesheet" href="css/styles.css">
+
+        <script src="js/log.js" defer></script>
+    </head>
+    <body>
+         <!-- Login-->
+        <main class="auth-layout">
+            <section class="auth-card">
+                <a class="brand" href="register.html">
+                    Grocery<span>Ko</span>
+                </a>
+                <p class="eyebrow"> MISSED YOU AROUND HERE! </p>
+                <h1> GLAD YOU'RE BACK! </h1>
+                <p class="muted">
+                    Log in to plan your next grocery run.
+                </p>
+
+                <!--Login Form-->
+                <form id="loginForm">
+                    <div class="form-field">
+                        <label for="login_uname"> Username </label>
+                        <input type="text" id="login_uname" placeholder="Enter your username" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="login_pword"> Password </label>
+                        <input type="password" id="login_pword" placeholder="Enter your password" required>
+                    </div>
+
+                    <button class="primary-button full-width" type="submit">
+                        Log In
+                    </button>
+
+                    <p id="logMessage" class="form-message"></p>
+                </form>
+
+                <p class="switch-page">
+                    Shop with us!
+                    <a href="register.html"> Create an account </a>
+                </p>
+            </section>
+        </main>
+    </body>
+</html>

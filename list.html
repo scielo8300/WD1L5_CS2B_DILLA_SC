@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GroceryKo | Grocery List</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/list.js" defer></script>
+</head>
+
+<body class="app-page">
+
+    <!-- Navigation Header -->
+    <header class="topbar">
+        <a class="brand" href="list.html">
+            Grocery<span>Ko</span>
+        </a>
+
+        <div class="topbar-actions">
+            <span id="welcomeMessage" class="welcome-message"></span>
+
+            <button id="logoutButton" class="secondary-button" type="button">
+                Log Out
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="app-container">
+
+        <section class="page-heading">
+            <p class="eyebrow"> TIME TO STOCK UP! </p>
+
+            <h1>SHOPPING LIST</h1>
+
+            <p class="muted">
+                Add items and get ready for your grocery run.
+            </p>
+        </section>
+
+        <section class="list-card">
+
+            <!-- Add Grocery Item Form -->
+            <form id="itemForm" class="item-form">
+
+                <div class="form-field item-name-field">
+                    <label for="item_name">Item Name</label>
+                    <input type="text" id="item_name"
+                        placeholder="e.g. Shampoo" required>
+                </div>
+
+                <div class="form-field quantity-field">
+                    <label for="item_qty">Quantity</label>
+                    <input type="number" id="item_qty"
+                        min="1" step="1" value="1" required>
+                </div>
+
+                <button class="primary-button add-button" type="submit">
+                    + Add Item
+                </button>
+
+            </form>
+
+            <!-- Grocery List Heading -->
+            <div class="list-heading">
+                <div>
+                    <h2>YOUR LIST</h2>
+
+                    <p class="muted small-text">
+                        Your items will show up here.
+                    </p>
+                </div>
+
+                <span id="itemCount" class="count-pill">
+                    0 items
+                </span>
+            </div>
+
+            <!-- Dynamic Grocery List -->
+            <ul id="groceryList" class="grocery-list"></ul>
+
+            <p id="emptyMessage" class="empty-message">
+                Your list is empty- time to add your item!
+            </p>
+
+            <!-- Clear List Button -->
+            <div class="list-footer">
+                <button id="clearButton" class="text-button" type="button">
+                    Clear List
+                </button>
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <p class="footer-note">
+            GroceryKo-ShopSmarterLiveEasier!
+        </p>
+
+    </main>
+
+</body>
+</html>
